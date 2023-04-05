@@ -8,7 +8,7 @@ cy = ctx.canvas.height/2;
 
 let confetti = [];
 const confettiCount = 300;
-const gravity = 1.9;
+const gravity = 0.4;
 const terminalVelocity = 5;
 const drag = 0.075;
 const colors = [
