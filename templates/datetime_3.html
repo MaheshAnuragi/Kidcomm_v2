@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <script type="text/javascript" src={{cdn_js | safe}}></script>
+
+    <style>
+
+      .buttons {
+          /* text-align: right; */
+          display: inline-block;
+          float: right;
+      }
+
+      .btn-hover {
+          width: 110px;
+          font-size: 16px;
+          font-weight: 600;
+          color: #fff;
+          cursor: pointer;
+          margin: 10px;
+          height: 55px;
+          text-align:center;
+          border: none;
+          background-size: 300% 100%;
+
+          border-radius: 50px;
+          moz-transition: all .4s ease-in-out;
+          -o-transition: all .4s ease-in-out;
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+      }
+
+      .btn-hover:hover {
+          background-position: 100% 0;
+          moz-transition: all .4s ease-in-out;
+          -o-transition: all .4s ease-in-out;
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+      }
+
+      .btn-hover:focus {
+          outline: none;
+      }
+
+      .btn-hover.color-3 {
+          background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+          box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+      }
+
+
+  </style>
+
+  </head>
+
+
+  <body>
+
+    <h1 style="color: green; display: inline;">{{user_name}}</h1>            
+            
+    <div class="buttons">
+            <a href="{{url_for('logout')}}"> 
+                <button class="btn-hover color-3" >Logout</button>
+            </a>
+    </div>
+
+
+
+    {{chart_code1 |safe}}
+
+    {{demo_script_code1 | safe}}
+
+  </body>
+</html>
